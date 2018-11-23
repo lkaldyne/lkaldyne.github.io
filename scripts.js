@@ -2,6 +2,7 @@ var page = document.querySelector('#page');
 
 window.onresize = function (){
     document.getElementById("TitleImage").style.animation = "none";
+    document.getElementById("TitleImage").style.border = "2px solid white";
     document.getElementById("TitleName").style.animation = "none";
     document.getElementById("TitleName").style.color = "white";
     document.getElementById("TitleDiv").style.animation = "none";
@@ -81,7 +82,9 @@ window.onload = function (){
   }, 100);
 }
 function titleSpawn() {
-    let elem = document.getElementById("navbar");
+    let elem1 = document.getElementById("TitleName");
+    let elem2 = document.getElementById("TitleImage");
+    let elem3 = document.getElementById("TitleDiv");
     var id = setInterval(frame, 5);
     var yPos = -500;
     var inc = 10;
@@ -91,7 +94,9 @@ function titleSpawn() {
             dec = 0;
             clearInterval(id);
         }
-        elem.style.top = yPos + "px";
+        elem1.style.top = yPos + "px";
+        elem2.style.top = yPos + "px";
+        elem3.style.top = yPos + "px";
         yPos+=inc;
         inc -= dec;
     }

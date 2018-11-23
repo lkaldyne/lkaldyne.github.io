@@ -16,7 +16,7 @@ body {background-color: #000028}
 #terminalContainer {
     position: relative;
     display: inline-block;
-    margin-top: 10%;
+    margin-top: 75px;
     width: 80%;
     height: 60%;
     opacity: 0;
@@ -26,17 +26,17 @@ body {background-color: #000028}
     transition: 3s;
 }
 
-@media only screen and (min-width : 1200px) {
+@media only screen and (min-width : 900px) {
     #navbar {
         opacity: 1;
         background-color: transparent;
         height: 115px;
         width: 100%;
-        position: absolute;
         top: 0;
         left: 0;
         z-index: 1;
         text-align: center;
+        margin-bottom: 0;
     }
 
     #TitleName {
@@ -125,7 +125,7 @@ body {background-color: #000028}
     }
 }
 
-@media only screen and (max-width : 1200px) {
+@media only screen and (max-width : 900px) {
     #navbar {
         opacity: 1;
         background-color: transparent;
