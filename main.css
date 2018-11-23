@@ -1,0 +1,186 @@
+@font-face{
+	font-family: 'Montserrat';
+	src: url('./fonts/Montserrat-Regular.ttf') format("truetype"), local('MontSerrat');
+}
+
+body {background-color: #000028}
+
+#contentWrapper {
+    position: absolute;
+    top: 0;
+    width: 99%;
+    height: 100%;
+    text-align: center;
+    transition: 3s;
+}
+#terminalContainer {
+    position: relative;
+    display: inline-block;
+    margin-top: 10%;
+    width: 80%;
+    height: 60%;
+    opacity: 0;
+    background-color: black;
+    border-radius: 10px;
+    border: 1pt solid white;
+    transition: 3s;
+}
+
+@media only screen and (min-width : 1200px) {
+    #navbar {
+        opacity: 1;
+        background-color: transparent;
+        height: 115px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        text-align: center;
+    }
+
+    #TitleName {
+        position: relative;
+        display: inline-block;
+        color: green;
+        font-size: 45px;
+        padding-left: 50px;
+        padding-top: 45px;
+        margin-top: 0;
+        margin-left: 0;
+        font-family: "Montserrat", sans-serif;
+        text-transform: uppercase;
+        z-index: 0;
+        animation: text 3s 1;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    #TitleImage {
+        position: relative;
+        margin-top: 25px;
+        display: inline-block;
+        border: 2px solid transparent;
+        padding-top: 0;
+        vertical-align: top;
+        z-index: 2;
+        animation: growBorder 2s 1;
+        animation-delay: 4s;
+        animation-fill-mode: forwards;
+        border-radius: 20px;
+    }
+
+    #TitleDiv {
+        position: relative;
+        display: inline-block;
+        background-color: transparent;
+        width: 1%;
+        height: 55px;
+        margin-right: -20px;
+        margin-bottom: -10px;
+        z-index: 2;
+        animation: divcrush 3s 1;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes text {
+        0% {
+            margin-left: 0px;
+            color: green;
+        }
+        50% {
+            margin-left: -700px;
+        }
+        100% {
+            margin-left: 0;
+            color: white;
+        }
+    }
+
+    @keyframes divcrush {
+        0% {
+            width: 1%;
+            background-color: #000028;
+        }
+        50% {
+            background-color: #000028;
+            width: 700px;
+        }
+        100% {
+            width: 1%;
+            background-color: #000028;
+        }
+    }
+
+    @keyframes growBorder {
+        0% {
+            border: 2px solid transparent;
+
+        }
+        100% {
+            border: 2px solid white;
+
+        }
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+    #navbar {
+        opacity: 1;
+        background-color: transparent;
+        height: auto;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        text-align: center;
+    }
+
+    #TitleName {
+        position: relative;
+        display: inline-block;
+        color: white;
+        font-size: 30px;
+        padding-left: 20px;
+        padding-top: 45px;
+        margin-top: 0;
+        margin-left: 0px;
+        margin-right: 10px;
+        font-family: "Montserrat", sans-serif;
+        text-transform: uppercase;
+        z-index: 0;
+        animation: text 3s 1;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    #TitleImage {
+        position: relative;
+        margin-top: 25px;
+        margin-left: 10px;
+        display: inline-block;
+        padding-top: 0;
+        vertical-align: top;
+        z-index: 2;
+        animation: growBorder 2s 1;
+        animation-delay: 4s;
+        animation-fill-mode: forwards;
+        border: 2px solid white;
+        border-radius: 20px;
+    }
+
+    #TitleDiv {
+        position: relative;
+        display: inline-block;
+        background-color: transparent;
+        width: 1%;
+        height: 55px;
+        margin-right: -20px;
+        margin-bottom: -10px;
+        z-index: 2;
+        animation: divcrush 3s 1;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+}
