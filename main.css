@@ -16,6 +16,8 @@ body {background-color: #000028}
 #terminalContainer {
     position: relative;
     display: inline-block;
+    overflow-y: scroll;
+    overflow-x: auto;
     margin-top: 75px;
     width: 80%;
     height: 60%;
@@ -24,6 +26,21 @@ body {background-color: #000028}
     border-radius: 10px;
     border: 1pt solid white;
     transition: 3s;
+}
+
+#terminalContainer::-webkit-scrollbar {
+    width: 20px;
+	background-color: rgba(255,255,255,0);
+}
+#terminalContainer::-webkit-scrollbar-track, #terminalContainer::-webkit-scrollbar-thumb {
+    border: 14px solid rgba(255,255,255,0);
+	background-clip: padding-box;
+}
+#terminalContainer::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+#terminalContainer::-webkit-scrollbar-thumb {
+	background-color: white;
 }
 
 @media only screen and (min-width : 900px) {
