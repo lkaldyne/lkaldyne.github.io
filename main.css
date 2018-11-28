@@ -16,18 +16,64 @@ body {background-color: #000028}
 #terminalContainer {
     position: relative;
     display: inline-block;
-    overflow-y: scroll;
-    overflow-x: auto;
+    overflow: hidden;
     margin-top: 75px;
-    width: 80%;
+    width: 90%;
     height: 60%;
     opacity: 0;
-    background-color: black;
+    background-color: #1b0a1a;
     border-radius: 10px;
-    border: 1pt solid white;
     transition: 3s;
+    text-align: left;
 }
+#terminalHeader {
+    position: relative;
+    display: inline-block;
+    margin-top: 0;
+    width: 100%;
+    height: 40px;
+    opacity: 1;
+    background-color: rgb(69,69,69);
+    transition: 3s;
+    text-align: left;
 
+}
+#sysInfo {
+    margin-left: 20px;
+    font-size: 20px;
+}
+#prompt {
+    position: relative;
+    width: 90%;
+    margin-left: 100px;
+    font-size: 20px;
+    font-family: Roboto, sans-serif;
+    color: white;
+    background: transparent;
+    border: transparent;
+    box-shadow: none;
+    outline: none;
+    margin-top: 50px;
+}
+.windowButton {
+    position: relative;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-radius: 10px;
+    margin-top: 13px;
+    margin-right: 3px;
+}
+.windowButton:nth-child(1){
+    margin-left: 13px;
+    background: #ff154c;
+}
+.windowButton:nth-child(2){
+    background: #00ff63;
+}
+.windowButton:nth-child(3){
+    background: #138032;
+}
 #terminalContainer::-webkit-scrollbar {
     width: 20px;
 	background-color: rgba(255,255,255,0);
