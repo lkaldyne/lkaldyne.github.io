@@ -26,6 +26,18 @@ body {background-color: #000028}
     transition: 3s;
     text-align: left;
 }
+#terminalBody {
+	position: relative;
+    display: inline-block;
+    overflow-x: none;
+	overflow-y: scroll;
+    width: 100%;
+    height: 90%;
+    background-color: transparent;
+    text-align: left;
+	word-wrap: break-word;
+    outline: transparent;
+}
 #terminalHeader {
     position: relative;
     display: inline-block;
@@ -36,25 +48,45 @@ body {background-color: #000028}
     background-color: rgb(69,69,69);
     transition: 3s;
     text-align: left;
-
 }
-#sysInfo {
+
+#inputChunk {
+    width: 90%;
+	margin-top: 0;
     margin-left: 20px;
     font-size: 20px;
-}
-#prompt {
-    position: relative;
-    width: 90%;
-    margin-left: 100px;
-    font-size: 20px;
-    font-family: Roboto, sans-serif;
-    color: white;
     background: transparent;
-    border: transparent;
-    box-shadow: none;
-    outline: none;
-    margin-top: 50px;
+	color: white;
+	display: inline-block;
+    overflow-y: auto;
+    overflow-x: auto;
+    word-wrap: break-word;
+    outline: transparent;
 }
+#inputChunk span {
+    font-weight: 100;
+    font-size: 25px;
+    color: #2E3D48;
+    animation: 1s blink step-end infinite;
+}
+.commandHistory span {
+    color: transparent;
+}
+
+.commandHistory {
+    width: 90%;
+	margin-top: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+    background: transparent;
+	color: green;
+	display: inline-block;
+    overflow-y: auto;
+    overflow-x: auto;
+    word-wrap: break-word;
+    outline: transparent;
+}
+
 .windowButton {
     position: relative;
     display: inline-block;
@@ -64,31 +96,40 @@ body {background-color: #000028}
     margin-top: 13px;
     margin-right: 3px;
 }
+
 .windowButton:nth-child(1){
     margin-left: 13px;
     background: #ff154c;
 }
 .windowButton:nth-child(2){
-    background: #00ff63;
+    background: #95ff46;
 }
 .windowButton:nth-child(3){
     background: #138032;
 }
-#terminalContainer::-webkit-scrollbar {
+
+#terminalBody::-webkit-scrollbar {
     width: 20px;
-	background-color: rgba(255,255,255,0);
-}
-#terminalContainer::-webkit-scrollbar-track, #terminalContainer::-webkit-scrollbar-thumb {
-    border: 14px solid rgba(255,255,255,0);
-	background-clip: padding-box;
-}
-#terminalContainer::-webkit-scrollbar-track {
 	background-color: transparent;
 }
-#terminalContainer::-webkit-scrollbar-thumb {
+#terminalBody::-webkit-scrollbar-track, #terminalContainer::-webkit-scrollbar-thumb {
+    border: 18px solid rgba(255,255,255,0);
+	background-clip: padding-box;
+}
+#terminalBody::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+#terminalBody::-webkit-scrollbar-thumb {
 	background-color: white;
 }
-
+@keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
 @media only screen and (min-width : 900px) {
     #navbar {
         opacity: 1;
