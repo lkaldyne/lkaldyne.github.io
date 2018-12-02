@@ -7,9 +7,10 @@ window.onresize = function (){
     document.getElementById("TitleName").style.color = "white";
     document.getElementById("TitleDiv").style.animation = "none";
 
-}
+};
 window.onload = function (){
     document.getElementById("terminalContainer").style.opacity = "1";
+    document.getElementById("terminalBody").focus();
     titleSpawn();
   for (let i = 0; i < 60; i++) {
     let square = document.createElement("div");
@@ -37,7 +38,7 @@ window.onload = function (){
     page.appendChild(square);
     reset(square, i);
   }
-}
+};
  async function reset(item, i) {
   let x = Math.floor(Math.random() * 100);
   let xText = x.toString()+"vw";
