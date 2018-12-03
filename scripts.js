@@ -12,6 +12,7 @@ window.onload = function (){
     document.getElementById("terminalContainer").style.opacity = "1";
     document.getElementById("terminalBody").focus();
     titleSpawn();
+    introTyping();
   for (let i = 0; i < 60; i++) {
     let square = document.createElement("div");
     if (i < 10) {
