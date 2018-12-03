@@ -62,12 +62,14 @@ body {background-color: #000028}
     overflow-x: auto;
     word-wrap: break-word;
     outline: transparent;
+    font-family: Courier, monospace;
 }
 #inputChunk span {
     font-weight: 100;
     font-size: 25px;
     color: #2E3D48;
     animation: 1s blink step-end infinite;
+    font-family: sans-serif;
 }
 .commandHistory span {
     color: transparent;
@@ -79,12 +81,13 @@ body {background-color: #000028}
     margin-left: 20px;
     font-size: 20px;
     background: transparent;
-	color: green;
+	color: #82ca6f;
 	display: inline-block;
     overflow-y: auto;
     overflow-x: auto;
     word-wrap: break-word;
     outline: transparent;
+    font-family: Courier, monospace;
 }
 
 .windowButton {
