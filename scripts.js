@@ -1,14 +1,8 @@
 var page = document.querySelector('#page');
 var pageWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-window.onresize = function (){
-    document.getElementById("TitleImage").style.animation = "none";
-    document.getElementById("TitleImage").style.border = "2px solid white";
-    document.getElementById("TitleName").style.animation = "none";
-    document.getElementById("TitleName").style.color = "white";
-    document.getElementById("TitleDiv").style.animation = "none";
 
-};
 window.onload = function (){
+    document.getElementById("TitleName").innerHTML = pageWidth;
     document.getElementById("terminalContainer").style.opacity = "1";
     document.getElementById("terminalBody").focus();
     let numSquares = 30;
