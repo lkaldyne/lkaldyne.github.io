@@ -133,7 +133,7 @@ body {background-color: #000028}
     color: white;
   }
 }
-@media only screen and (min-width : 900px) {
+@media only screen and (min-device-width : 900px) {
     #navbar {
         opacity: 1;
         background-color: transparent;
@@ -232,7 +232,7 @@ body {background-color: #000028}
     }
 }
 
-@media only screen and (max-width : 900px) {
+@media only screen and (max-device-width : 900px) {
     #navbar {
         opacity: 1;
         background-color: transparent;
