@@ -11,7 +11,9 @@ function newPrompt(){
     terminalBody.appendChild(newInputBox);
 }
 
-
+terminalContainer.onclick = function() {
+  alert("you pressed me");
+};
 terminalContainer.onkeydown= function (e){
     scrolltoBottom("terminalBody");
 
@@ -134,7 +136,7 @@ var onloadTypingPromise = new Promise(function(resolve, reject) {
     let txt1 = 'cat intro.txt';
     let speed = 100;
     typeWriter(inputText, i, txt1, speed);
-    setTimeout(() => resolve(1), 1500); // (*)
+    setTimeout(() => resolve(1), 2500); // (*)
 
 }).then(function() { // (**)
     let txt1 = 'cat intro.txt';
