@@ -51,22 +51,22 @@ terminalContainer.onkeydown= function (e){
 };
 
 function processCommand(command) {
-    if (command === "help") {
+    if (command === "help" || command === "Help") {
         return "The following commands are currently supported:<br><br>" +
             "<u>cat &lt;filename&gt;:</u>&nbsp;displays the contets of that file<br>" +
             "<u>clear:</u>&nbsp;clears the contents of the terminal<br>" +
             "<u>ls:</u>&nbsp;lists the files in the current directory";
     }
-    else if (command === "clear") {
+    else if (command === "clear" || command === "Clear") {
         return "clearConsole";
     }
-    else if (command === "ls") {
+    else if (command === "ls" || command === "Ls") {
         return "intro.txt &nbsp; skills.info &nbsp; projects.info &nbsp; resume.pdf &nbsp; contact.info";
     }
-    else if (command === "ls -a") {
+    else if (command === "ls -a" || command === "Ls -a") {
         return ". &nbsp; .. &nbsp; .secretFile &nbsp; intro.txt &nbsp; skills.info &nbsp; projects.info &nbsp; resume.pdf &nbsp; contact.info";
     }
-    else if (command.substring(0,3) === "cat") {
+    else if (command.substring(0,3) === "cat" || command.substring(0,3) === "Cat") {
         let filename = command.substring(4);
         if (filename === ".secretFile") {
             return "I honestly had no clue what to put in here. I guess this should be like a congrats for knowing " +
