@@ -2,22 +2,30 @@ var terminalBody = document.getElementById("terminalBody");
 var terminalContainer = document.getElementById("terminalContainer");
 
 function newPrompt(){
+    let notFirstTime = false;
     let oldDiv = document.getElementById("inputChunk");
+    let oldInputBox = document.querySelector("#inputChunk input");
+    if (oldInputBox != null) {
+        oldInputBox.parentNode.removeChild(oldInputBox);
+        notFirstTime = true;
+    }
     oldDiv.className = "commandHistory";
     oldDiv.id = "";
     let newInputBox = document.createElement('div');
     newInputBox.setAttribute("id", "inputChunk");
-    newInputBox.innerHTML = '<p>user@laith.kamaleddine.com:~/home$ <span>|</span></p>';
+    newInputBox.innerHTML = 'user@laith.kamaleddine.com:~/home$ <input type="text">';
     terminalBody.appendChild(newInputBox);
+    //if (notFirstTime) {
+    document.querySelector("#inputChunk input").focus();
+    //}
 }
 
 terminalContainer.onclick = function() {
-    terminalContainer.focus();
+    document.querySelector("#inputChunk input").focus();
 };
 terminalContainer.onkeydown= function (e){
     scrolltoBottom("terminalBody");
 
-    let inputText = document.querySelector("#inputChunk p");
     let keynum;
 
     if(window.event) { // IE
@@ -26,36 +34,20 @@ terminalContainer.onkeydown= function (e){
       keynum = e.which;
     }
     if (keynum === 13) {
-        let response = processCommand(inputText.innerHTML.substring(35,inputText.innerHTML.length-14));
+        let inputText = document.querySelector("#inputChunk input").value;
+        let response = processCommand(inputText);
         if (response === "clearConsole") {
             newPrompt();
             scrolltoBottom("terminalBody");
             clearConsole();
         }
         else {
-            inputText.innerHTML += "<br><br>" + response;
+            let promptText = document.querySelector("#inputChunk");
+            promptText.innerHTML = "user@laith.kamaleddine.com:~/home$ " + inputText + "<br><br>" + response;
             newPrompt();
             scrolltoBottom("terminalBody");
         }
     }
-    else if (keynum === 8) {
-        let currentText = inputText.innerHTML;
-        if (currentText.length > 49) {
-            inputText.innerHTML = currentText.substring(0, currentText.length - 15) + "<span>|</span>";
-        }
-    }
-    else if ((keynum >= 40 && keynum <= 90) || (keynum >= 96 && keynum <= 111) || (keynum >= 186 && keynum <= 222) || keynum === 32){
-        if (e.key !== "Delete" && e.key!== "Insert") {
-            let currentText = inputText.innerHTML;
-            inputText.innerHTML = currentText.substring(0, currentText.length - 14) + e.key + "<span>|</span>";
-        }
-    }
-    //String.fromCharCode(keynum).toLowerCase()
-    //alert(String.fromCharCode(keynum));
-};
-
-window.onkeydown = function(e) {
-    return !(e.keyCode == 32);
 };
 
 function processCommand(command) {
@@ -123,11 +115,10 @@ function typeWriter(elem, i, txt, speed) {
     if (i < txt.length) {
         elem.innerHTML += txt.charAt(i);
         i++;
-        setTimeout(function(){typeWriter(elem,i,txt,speed)}, speed);
+        setTimeout(function () {
+            typeWriter(elem, i, txt, speed)
+        }, speed);
     }
-}
-function introTyping() {
-    return onloadTypingPromise;
 }
 
 var onloadTypingPromise = new Promise(function(resolve, reject) {
@@ -147,8 +138,6 @@ var onloadTypingPromise = new Promise(function(resolve, reject) {
     scrolltoBottom("terminalBody");
 
 }).then(function() { // (***)
-    let inputText = document.querySelector("#inputChunk p");
-    let txt2 = 'help';
-    let currentText = inputText.innerHTML;
-    inputText.innerHTML = currentText.substring(0, currentText.length - 14) + txt2 + "<span>|</span>";
+    let inputText = document.querySelector("#inputChunk input");
+    inputText.value = "help";
 });
