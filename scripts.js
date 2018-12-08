@@ -1,5 +1,5 @@
 var page = document.querySelector('#page');
-
+var pageWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 window.onresize = function (){
     document.getElementById("TitleImage").style.animation = "none";
     document.getElementById("TitleImage").style.border = "2px solid white";
@@ -11,9 +11,13 @@ window.onresize = function (){
 window.onload = function (){
     document.getElementById("terminalContainer").style.opacity = "1";
     document.getElementById("terminalBody").focus();
-    titleSpawn();
+    let numSquares = 30;
+    if (pageWidth > 900){
+        titleSpawn();
+        numSquares = 60;
+    }
     introTyping();
-  for (let i = 0; i < 60; i++) {
+  for (let i = 0; i < numSquares; i++) {
     let square = document.createElement("div");
     if (i < 10) {
         square.style.cssText = "width: 8px; height: 8px; position: absolute; display: inline-block; border: 1px solid black";
