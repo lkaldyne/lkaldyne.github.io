@@ -10,7 +10,6 @@ window.onload = function (){
         titleSpawn();
         numSquares = 60;
     }
-    introTyping();
   for (let i = 0; i < numSquares; i++) {
     let square = document.createElement("div");
     if (i < 10) {
