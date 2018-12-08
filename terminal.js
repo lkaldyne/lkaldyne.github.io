@@ -12,7 +12,7 @@ function newPrompt(){
 }
 
 terminalContainer.onclick = function() {
-  alert("you pressed me");
+    terminalContainer.focus();
 };
 terminalContainer.onkeydown= function (e){
     scrolltoBottom("terminalBody");
