@@ -6,10 +6,10 @@ window.onload = function (){
     document.getElementById("terminalContainer").style.opacity = "1";
     document.getElementById("terminalBody").focus();
     let numSquares = 30;
-    if (pageWidth > 900){
-        titleSpawn();
+    if (pageWidth > 980){
         numSquares = 60;
     }
+    titleSpawn();
   for (let i = 0; i < numSquares; i++) {
     let square = document.createElement("div");
     if (i < 10) {
@@ -83,20 +83,8 @@ window.onload = function (){
 function titleSpawn() {
     let elem1 = document.getElementById("TitleName");
     let elem2 = document.getElementById("TitleImage");
-    let elem3 = document.getElementById("TitleDiv");
-    var id = setInterval(frame, 5);
-    var yPos = -500;
-    var inc = 10;
-    var dec = 0.1;
-    function frame() {
-        if (inc <= -1) {
-            dec = 0;
-            clearInterval(id);
-        }
-        elem1.style.top = yPos + "px";
-        elem2.style.top = yPos + "px";
-        elem3.style.top = yPos + "px";
-        yPos+=inc;
-        inc -= dec;
-    }
+    elem1.style.top = "0";
+    elem2.style.top = "0";
+    elem2.style.border = "2px solid white";
+
 }
