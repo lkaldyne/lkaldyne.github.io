@@ -2,7 +2,7 @@ var page = document.querySelector('#page');
 var pageWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
 window.onload = function (){
-    document.getElementById("TitleName").innerHTML = pageWidth;
+    //document.getElementById("TitleName").innerHTML = pageWidth;
     document.getElementById("terminalContainer").style.opacity = "1";
     document.getElementById("terminalBody").focus();
     let numSquares = 30;
@@ -85,6 +85,5 @@ function titleSpawn() {
     let elem2 = document.getElementById("TitleImage");
     elem1.style.top = "0";
     elem2.style.top = "0";
-    elem2.style.border = "2px solid white";
 
 }
