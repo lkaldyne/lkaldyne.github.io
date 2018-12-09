@@ -140,4 +140,5 @@ var onloadTypingPromise = new Promise(function(resolve, reject) {
 }).then(function() { // (***)
     let inputText = document.querySelector("#inputChunk input");
     inputText.value = "help";
+    document.getElementById("TitleImage").style.border = "2px solid white";
 });
