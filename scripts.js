@@ -1,5 +1,7 @@
 var page = document.querySelector('#page');
 var pageWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+var arrowbounce = true;
+var scrollCapture = 0;
 
 window.onload = function (){
     //document.getElementById("TitleName").innerHTML = pageWidth;
@@ -35,9 +37,10 @@ window.onload = function (){
     }
     page.appendChild(square);
     reset(square, i);
+    arrowBounce();
   }
 };
- async function reset(item, i) {
+async function reset(item, i) {
   let x = Math.floor(Math.random() * 100);
   let xText = x.toString()+"vw";
   let time = Math.floor(Math.random() * 15) + 10;
@@ -79,6 +82,52 @@ window.onload = function (){
     item.style.opacity = "0";
     setTimeout(()=>{reset(item,i)}, time*1000);
   }, 100);
+}
+
+async function arrowBounce() {
+    if (arrowbounce) {
+        let item = document.getElementById("scrollArrow");
+        item.style.transition = "none";
+        item.style.bottom = "100px";
+        item.style.opacity = "0.2";
+        setTimeout(() => {
+            item.style.transition = "1s";
+            item.style.bottom = "0";
+            item.style.opacity = "1";
+            setTimeout(() => {arrowBounce()}, 2000);
+        }, 100);
+    }
+}
+
+function scrollArrowHandling() {
+    let doc = document.documentElement;
+    let top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+    let arrow = document.getElementById("scrollArrow");
+    if (top >= 200) {
+        arrowbounce = false;
+        arrow.style.transition = "1s";
+        arrow.style.transform = "rotate(180deg)";
+        arrow.style.bottom = "50px";
+        arrow.style.opacity = "1";
+    }
+    if (top < 200) {
+        arrow.style.transition = "1s";
+        arrow.style.transform = "rotate(0deg)";
+        if (scrollCapture >= 200) {
+            arrow.style.opacity = "0.5";
+        }
+        arrowbounce = true;
+    }
+    scrollCapture = top;
+}
+
+function clickArrowHandling() {
+    let doc = document.documentElement;
+    let top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+    if (top >= 200) {
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+    }
 }
 function titleSpawn() {
     let elem1 = document.getElementById("TitleName");

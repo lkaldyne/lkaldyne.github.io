@@ -3,8 +3,12 @@
 	src: url('./fonts/Montserrat-Regular.ttf') format("truetype"), local('MontSerrat');
 }
 
-body {background-color: #000028}
-
+body {
+    background-color: #000028
+}
+html {
+  scroll-behavior: smooth;
+}
 #contentWrapper {
     position: absolute;
     top: 0;
@@ -122,6 +126,14 @@ body {background-color: #000028}
 }
 #terminalBody::-webkit-scrollbar-thumb {
 	background-color: white;
+}
+
+#scrollArrow {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    width: 70px;
+    height: 60px;
 }
 
 @media only screen and (min-width : 980px) {
