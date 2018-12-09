@@ -152,6 +152,8 @@ body {background-color: #000028}
         font-family: "Montserrat", sans-serif;
         text-transform: uppercase;
         z-index: 0;
+        top: -500px;
+        transition: 1.3s;
     }
 
     #TitleImage {
@@ -163,17 +165,8 @@ body {background-color: #000028}
         vertical-align: top;
         z-index: 2;
         border-radius: 20px;
-    }
-
-    #TitleDiv {
-        position: relative;
-        display: inline-block;
-        background-color: transparent;
-        width: 1%;
-        height: 55px;
-        margin-right: -20px;
-        margin-bottom: -10px;
-        z-index: 2;
+        transition: 1s;
+        top: -500px;
     }
 }
 
@@ -196,7 +189,7 @@ body {background-color: #000028}
         position: relative;
         display: inline-block;
         color: white;
-        font-size: 30px;
+        font-size: 35px;
         padding-left: 20px;
         padding-top: 45px;
         margin-top: 0;
@@ -208,6 +201,8 @@ body {background-color: #000028}
         animation: text 3s 1;
         animation-delay: 1s;
         animation-fill-mode: forwards;
+        top: -500px;
+        transition: 1.3s
     }
 
     #TitleImage {
@@ -223,19 +218,7 @@ body {background-color: #000028}
         animation-fill-mode: forwards;
         border: 2px solid white;
         border-radius: 20px;
-    }
-
-    #TitleDiv {
-        position: relative;
-        display: inline-block;
-        background-color: transparent;
-        width: 1%;
-        height: 55px;
-        margin-right: -20px;
-        margin-bottom: -10px;
-        z-index: 2;
-        animation: divcrush 3s 1;
-        animation-delay: 1s;
-        animation-fill-mode: forwards;
+        top: -500px;
+        transition: 1s;
     }
 }
