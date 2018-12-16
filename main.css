@@ -136,6 +136,10 @@ html {
     height: 60px;
 }
 
+#scrollArrow:hover {
+    cursor: pointer;
+}
+
 @media only screen and (min-width : 980px) {
     #inputChunk input {
         width: 35%;
