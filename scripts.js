@@ -128,6 +128,9 @@ function clickArrowHandling() {
         document.body.scrollTop = document.documentElement.scrollTop = 0;
 
     }
+    else {
+        document.body.scrollTop = document.documentElement.scrollTop = 500;
+    }
 }
 function titleSpawn() {
     let elem1 = document.getElementById("TitleName");
