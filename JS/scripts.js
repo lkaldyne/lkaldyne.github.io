@@ -103,17 +103,17 @@ function scrollArrowHandling() {
     let doc = document.documentElement;
     let top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
     let arrow = document.getElementById("scrollArrow");
-    if (top >= 200) {
+    if (top >= 400) {
         arrowbounce = false;
         arrow.style.transition = "1s";
         arrow.style.transform = "rotate(180deg)";
         arrow.style.bottom = "50px";
         arrow.style.opacity = "1";
     }
-    if (top < 200) {
+    if (top < 400) {
         arrow.style.transition = "1s";
         arrow.style.transform = "rotate(0deg)";
-        if (scrollCapture >= 200) {
+        if (scrollCapture >= 400) {
             arrow.style.opacity = "0.5";
         }
         arrowbounce = true;
@@ -124,12 +124,12 @@ function scrollArrowHandling() {
 function clickArrowHandling() {
     let doc = document.documentElement;
     let top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-    if (top >= 200) {
+    if (top >= 400) {
         document.body.scrollTop = document.documentElement.scrollTop = 0;
 
     }
     else {
-        document.body.scrollTop = document.documentElement.scrollTop = 500;
+        document.body.scrollTop = document.documentElement.scrollTop = 900;
     }
 }
 function titleSpawn() {
@@ -137,5 +137,23 @@ function titleSpawn() {
     let elem2 = document.getElementById("TitleImage");
     elem1.style.top = "0";
     elem2.style.top = "0";
+
+}
+
+function mobileMenuExpandCollapse(el) {
+    let elementContents = el.getElementsByTagName("DIV")[0];
+    let elementArrow = el.getElementsByTagName("IMG")[0];
+    if (elementContents.style.height === "40px") {
+        elementContents.style.height = "0";
+        elementContents.style.marginTop = "0";
+        elementArrow.style.transform = "rotate(0deg)";
+    }
+    else {
+        elementContents.style.height = "40px";
+        elementContents.style.marginTop = "20px";
+        elementArrow.style.transform = "rotate(180deg)";
+    }
+
+
 
 }
