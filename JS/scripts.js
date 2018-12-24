@@ -12,6 +12,7 @@ window.onload = function (){
         numSquares = 60;
     }
     titleSpawn();
+    skillItemFormatting();
   for (let i = 0; i < numSquares; i++) {
     let square = document.createElement("div");
     if (i < 10) {
@@ -143,17 +144,35 @@ function titleSpawn() {
 function mobileMenuExpandCollapse(el) {
     let elementContents = el.getElementsByTagName("DIV")[0];
     let elementArrow = el.getElementsByTagName("IMG")[0];
-    if (elementContents.style.height === "40px") {
-        elementContents.style.height = "0";
-        elementContents.style.marginTop = "0";
-        elementArrow.style.transform = "rotate(0deg)";
-    }
-    else {
-        elementContents.style.height = "40px";
+    if (elementContents.style.height === "0px" || elementContents.style.height === '') {
         elementContents.style.marginTop = "20px";
+        elementContents.style.height = "80px";
+        //elementContents.style.overflow = 'auto';
         elementArrow.style.transform = "rotate(180deg)";
     }
+    else {
+        elementContents.style.height = "0";
+        elementContents.style.marginTop = "0";
+       // elementContents.style.overflow = 'hidden';
+        elementArrow.style.transform = "rotate(0deg)";
+    }
+}
 
+function skillItemFormatting() {
+    let skillElems = document.getElementsByClassName("mobileSkillItem");
+    for (let i = 0; i < skillElems.length; i++) {
+        let text = skillElems[i].innerHTML;
+        let j = 0;
+        while (j !== text.length) {
+            if (text[j] === ",") {
+                let firstChunk = text.substring(0,j);
+                let secondChunk = text.substring(j+1);
+                text = firstChunk + '<span class="itemSeparator">&nbsp&nbsp&nbsp · &nbsp&nbsp&nbsp</span>' + secondChunk;
+            }
+            j++;
+        }
+        skillElems[i].innerHTML = text;
+    }
 
 
 }
