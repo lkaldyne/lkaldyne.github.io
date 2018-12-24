@@ -3,6 +3,9 @@ var pageWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 var arrowbounce = true;
 var scrollCapture = 0;
 
+function refreshPageWidth() {
+    pageWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+}
 window.onload = function (){
     //document.getElementById("TitleName").innerHTML = pageWidth;
     document.getElementById("terminalContainer").style.opacity = "1";
@@ -146,14 +149,18 @@ function mobileMenuExpandCollapse(el) {
     let elementArrow = el.getElementsByTagName("IMG")[0];
     if (elementContents.style.height === "0px" || elementContents.style.height === '') {
         elementContents.style.marginTop = "20px";
-        elementContents.style.height = "80px";
-        //elementContents.style.overflow = 'auto';
         elementArrow.style.transform = "rotate(180deg)";
+        refreshPageWidth();
+        if (pageWidth > 700) {
+            elementContents.style.height = "100px";
+        }
+        else {
+            elementContents.style.height = "210px";
+        }
     }
     else {
         elementContents.style.height = "0";
         elementContents.style.marginTop = "0";
-       // elementContents.style.overflow = 'hidden';
         elementArrow.style.transform = "rotate(0deg)";
     }
 }
