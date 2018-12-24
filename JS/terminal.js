@@ -90,6 +90,10 @@ function processCommand(command) {
         else if (filename === "contact.info") {
             return "Email #1: Lkamaled@edu.uwaterloo.ca<br>Email #2: L.Kaldyne@gmail.com";
         }
+        else if (filename === "skills.info") {
+            window.location.href = "#technicalTitle";
+            return "Scrolling to skills section...";
+        }
         else {
             return "cat: Could not find file " + filename;
         }
@@ -120,7 +124,6 @@ function typeWriter(elem, i, txt, speed) {
         }, speed);
     }
 }
-
 var onloadTypingPromise = new Promise(function(resolve, reject) {
     let inputText = document.querySelector("#inputChunk p");
     let i = 0;
