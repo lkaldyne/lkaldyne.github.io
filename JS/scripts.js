@@ -174,7 +174,7 @@ function skillItemFormatting() {
             if (text[j] === ",") {
                 let firstChunk = text.substring(0,j);
                 let secondChunk = text.substring(j+1);
-                text = firstChunk + '<span class="itemSeparator">&nbsp&nbsp&nbsp · &nbsp&nbsp&nbsp</span>' + secondChunk;
+                text = firstChunk + '<span class="itemSeparator"> · </span>' + secondChunk;
             }
             j++;
         }
