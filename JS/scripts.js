@@ -180,6 +180,4 @@ function skillItemFormatting() {
         }
         skillElems[i].innerHTML = text;
     }
-
-
 }
