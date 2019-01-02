@@ -172,7 +172,7 @@ html {
     cursor: pointer;
 }
 
-#technicalContainer {
+.technicalContainer {
     position: relative;
     margin: 400px 0 0 0;
     width: 101%;
@@ -183,7 +183,7 @@ html {
     z-index: 6;
 }
 
-#projectContainer {
+.projectContainer {
     position: relative;
     margin: -100px 0 0 0;
     width: 101%;
