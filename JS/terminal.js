@@ -33,6 +33,27 @@ terminalContainer.onkeydown= function (e){
     } else if(e.which){ // Netscape/Firefox/Opera
       keynum = e.which;
     }
+    if (keynum === 9) {
+        e.preventDefault();
+        let inputText = document.querySelector("#inputChunk input").value;
+        switch (inputText.substring(0,5)) {
+            case "cat p":
+                document.querySelector("#inputChunk input").value = "cat projects.info";
+                break;
+            case "cat i":
+                document.querySelector("#inputChunk input").value = "cat intro.txt";
+                break;
+            case "cat s":
+                document.querySelector("#inputChunk input").value = "cat skills.info";
+                break;
+            case "cat r":
+                document.querySelector("#inputChunk input").value = "cat resume.pdf";
+                break;
+            case "cat c":
+                document.querySelector("#inputChunk input").value = "cat contact.info";
+                break;
+        }
+    }
     if (keynum === 13) {
         let inputText = document.querySelector("#inputChunk input").value;
         let response = processCommand(inputText);
@@ -46,6 +67,16 @@ terminalContainer.onkeydown= function (e){
             promptText.innerHTML = "user@laith.kamaleddine.com:~/home$ " + inputText + "<br><br>" + response;
             newPrompt();
             scrolltoBottom("terminalBody");
+            if (response === "Scrolling to skills section...") {
+                scrollToElement("technicals");
+            }
+            else if (response === "Scrolling to projects section...") {
+                scrollToElement("projects");
+            }
+            else if (response === "Redirecting to resume.pdf...") {
+                let win = window.open("https://lkaldyne.github.io/resume.pdf", '_blank');
+                win.focus();
+            }
         }
     }
 };
@@ -55,7 +86,8 @@ function processCommand(command) {
         return "The following commands are currently supported:<br><br>" +
             "<u>cat &lt;filename&gt;:</u>&nbsp;displays the contets of that file<br>" +
             "<u>clear:</u>&nbsp;clears the contents of the terminal<br>" +
-            "<u>ls:</u>&nbsp;lists the files in the current directory";
+            "<u>ls:</u>&nbsp;lists the files in the current directory<br>" +
+            "<u>&lt;tab key&gt;:</u>&nbsp;autocompletes file names following 'cat' command";
     }
     else if (command === "clear" || command === "Clear") {
         return "clearConsole";
@@ -90,6 +122,15 @@ function processCommand(command) {
         else if (filename === "contact.info") {
             return "Email #1: Lkamaled@edu.uwaterloo.ca<br>Email #2: L.Kaldyne@gmail.com";
         }
+        else if (filename === "skills.info") {
+            return "Scrolling to skills section...";
+        }
+        else if (filename === "projects.info") {
+            return "Scrolling to projects section...";
+        }
+        else if (filename === "resume.pdf") {
+            return "Redirecting to resume.pdf...";
+        }
         else {
             return "cat: Could not find file " + filename;
         }
@@ -120,7 +161,6 @@ function typeWriter(elem, i, txt, speed) {
         }, speed);
     }
 }
-
 var onloadTypingPromise = new Promise(function(resolve, reject) {
     let inputText = document.querySelector("#inputChunk p");
     let i = 0;
@@ -142,3 +182,7 @@ var onloadTypingPromise = new Promise(function(resolve, reject) {
     inputText.value = "help";
     document.getElementById("TitleImage").style.border = "2px solid white";
 });
+
+function scrollToElement(id) {
+    document.getElementById(id).scrollIntoView();
+}
