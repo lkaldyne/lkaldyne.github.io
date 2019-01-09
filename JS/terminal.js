@@ -184,5 +184,13 @@ var onloadTypingPromise = new Promise(function(resolve, reject) {
 });
 
 function scrollToElement(id) {
-    document.getElementById(id).scrollIntoView();
+    //document.getElementById(id).scrollIntoView();
+    let element = document.getElementById(id);
+    let rect = element.getBoundingClientRect();
+    if (id === 'projects') {
+        document.body.scrollTop = rect.top + 100;
+    }
+    else {
+        document.body.scrollTop = rect.top
+    }
 }
