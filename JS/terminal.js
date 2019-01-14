@@ -52,6 +52,8 @@ terminalContainer.onkeydown= function (e){
             case "cat c":
                 document.querySelector("#inputChunk input").value = "cat contact.info";
                 break;
+            case "cat .":
+                document.querySelector("#inputChunk input").value = "cat .secretFile";
         }
     }
     if (keynum === 13) {
