@@ -86,7 +86,7 @@ terminalContainer.onkeydown= function (e){
 function processCommand(command) {
     if (command === "help" || command === "Help") {
         return "The following commands are currently supported:<br><br>" +
-            "<u>cat &lt;filename&gt;:</u>&nbsp;displays the contets of that file<br>" +
+            "<u>cat &lt;filename&gt;:</u>&nbsp;displays the contents of that file<br>" +
             "<u>clear:</u>&nbsp;clears the contents of the terminal<br>" +
             "<u>ls:</u>&nbsp;lists the files in the current directory<br>" +
             "<u>&lt;tab key&gt;:</u>&nbsp;autocompletes file names following 'cat' command";
