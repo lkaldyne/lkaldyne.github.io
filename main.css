@@ -427,6 +427,10 @@ html {
     text-align: right;
 }
 
+.left ul {
+    text-align: left;
+}
+
 /* Place the container to the right */
 .right {
     left: 50%;
