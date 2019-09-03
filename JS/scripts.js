@@ -5,6 +5,19 @@ var scrollCapture = 0;
 var projectsInfo = '{\
     "items" : [\
         {\
+            "title"   : "Created a web app that executes automated, routinely GitHub commits for all of its users.",\
+            "date"    : "June 2019",\
+            "linkMsg" : "Check out the repo",\
+            "link"    : "https://github.com/lkaldyne/autoCommitter",\
+            "imgLink" : "media/projectMedia/autoCommitter.JPG"\
+        },\
+		{\
+            "title"   : "Started my Machine Learning Journey",\
+            "date"    : "June 2019",\
+            "linkMsg" : "Check out the repo",\
+            "link"    : "https://github.com/lkaldyne/ML_Exploration"\
+        },\
+        {\
             "title"   : "Coded this website from scratch!",\
             "date"    : "November 2018",\
             "linkMsg" : "Check out the repo",\
