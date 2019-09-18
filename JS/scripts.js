@@ -23,7 +23,7 @@ var projectsInfo = '{\
             "date"    : "June 2019",\
             "linkMsg" : "Check out the repo",\
             "link"    : "https://github.com/lkaldyne/ML_Exploration/",\
-            "imgLink" : "media/projectMedia/knn.JPG"\
+            "imgLink" : "media/projectMedia/knn.jpg"\
         },\
 		{\
             "title"   : "Built a web app to make any developer look like a dedicated code guru. Auto-Committer performs customizable, routinely commits to GitHub daily or weekly on behalf of its users, giving them a pleasing and colorful commit history.",\
