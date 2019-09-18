@@ -5,7 +5,7 @@ var scrollCapture = 0;
 var projectsInfo = '{\
     "items" : [\
         {\
-            "title"   : "Created a web app that executes automated, routinely GitHub commits for all of its users.",\
+            "title"   : "Built a web app to make any developer look like a dedicated code guru. Auto-Committer performs customizable, routinely commits to GitHub daily or weekly on behalf of its users, giving them a pleasing and colorful commit history.",\
             "date"    : "June 2019",\
             "linkMsg" : "Check out the repo",\
             "link"    : "https://github.com/lkaldyne/autoCommitter",\
