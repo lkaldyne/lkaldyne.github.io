@@ -5,6 +5,27 @@ var scrollCapture = 0;
 var projectsInfo = '{\
     "items" : [\
         {\
+            "title"   : "Implemented a PNG utility tool for decoding png files, scanning chunks for corrupted CRC data, and concatenating multiple images into one aggregated png file.",\
+            "date"    : "September 2019",\
+            "linkMsg" : "",\
+            "link"    : "",\
+            "imgLink" : "media/projectMedia/PNGTool.png"\
+        },\
+		{\
+            "title"   : "Built a K-Means Clustering algorithm to predict the likelihood of survival on the Titanic ship based on various factors (age, gender, class, etc.)",\
+            "date"    : "July 2019",\
+            "linkMsg" : "Check out the repo",\
+            "link"    : "https://github.com/lkaldyne/ML_Exploration/",\
+            "imgLink" : "media/projectMedia/titanic.jpg"\
+        },\
+		{\
+            "title"   : "Created KNN and Support Vector Machine machine learning algorithms from scratch to analyze incoming breast cancer scan data. Algorithms output whether a particular scan is a benign or malignant tumor, achieving an accuracy of 98% on a test data set.",\
+            "date"    : "June 2019",\
+            "linkMsg" : "Check out the repo",\
+            "link"    : "https://github.com/lkaldyne/ML_Exploration/",\
+            "imgLink" : "media/projectMedia/knn.JPG"\
+        },\
+		{\
             "title"   : "Built a web app to make any developer look like a dedicated code guru. Auto-Committer performs customizable, routinely commits to GitHub daily or weekly on behalf of its users, giving them a pleasing and colorful commit history.",\
             "date"    : "June 2019",\
             "linkMsg" : "Check out the repo",\
