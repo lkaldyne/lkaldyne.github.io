@@ -109,9 +109,9 @@ function processCommand(command) {
         }
         else if (filename === "intro.txt") {
             return "Welcome to my Website!<br><br>" +
-                "My name is Laith Kamaleddine and I am a 2<sup>nd</sup> year student at UWaterloo Engineering.&nbsp;" +
-                "I usually consider myself to be more of a backend developer, but this website was a chance for me " +
-                "to explore the world of Front-End and Web UX!<br><br>" +
+                "My name is Laith Kamaleddine and I am a 3<sup>rd</sup> year student at UWaterloo Engineering.&nbsp;" +
+                "I usually consider myself to be more of a backend developer, but I felt it would be fun to dive into frontend design by challenging myself " +
+                "to build a responsive portfolio using nothing but HTML, CSS and JS! (i.e. no frontend frameworks) <br><br>" +
                 "With this being said, picking up new things has always been a joy of mine.&nbsp;" +
                 "Learning + Growth are basically my life mantra. My satisfaction simply can't be narrowed down to " +
                 "a handful of activities. As long as I'm challenged to learn something new, or to master something " +
