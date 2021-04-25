@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #000028;
+    background-color: #36353b;
     margin: 0;
 }
 html {
@@ -174,10 +174,10 @@ html {
 
 .technicalContainer {
     position: relative;
-    margin: 400px 0 0 0;
+    margin: 100px 0 100px 0;
     width: 101%;
     height: auto;
-    background-color: rgba(60,100,100,1);
+    background-color: rgba(60,100,100,0);
     border-radius: 20px;
     text-align: center;
     z-index: 6;
@@ -296,7 +296,7 @@ html {
         font-family: "Montserrat", sans-serif;
         text-transform: uppercase;
         z-index: 0;
-        top: -500px;
+        top: 0;
         transition: 1.3s;
     }
 
@@ -304,13 +304,13 @@ html {
         position: relative;
         margin-top: 25px;
         display: inline-block;
-        border: 2px solid transparent;
+        border: 2px solid white;
         padding-top: 0;
         vertical-align: top;
         z-index: 2;
         border-radius: 20px;
         transition: 1s;
-        top: -500px;
+        top: 0;
     }
 }
 

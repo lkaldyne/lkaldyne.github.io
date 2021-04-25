@@ -121,41 +121,41 @@ function refreshPageWidth() {
 }
 window.onload = function (){
     //document.getElementById("TitleName").innerHTML = pageWidth;
-    document.getElementById("terminalContainer").style.opacity = "1";
-    document.getElementById("terminalBody").focus();
+    // document.getElementById("terminalContainer").style.opacity = "1";
+    // document.getElementById("terminalBody").focus();
     let numSquares = 30;
     if (pageWidth > 980){
         numSquares = 60;
     }
     titleSpawn();
     skillItemFormatting();
-    for (let i = 0; i < numSquares; i++) {
-        let square = document.createElement("div");
-        if (i < 10) {
-            square.style.cssText = "width: 8px; height: 8px; position: absolute; display: inline-block; border: 1px solid black";
-        }
-        else if (i < 20) {
-            square.style.cssText = "width: 20px; height: 20px; position: absolute; display: inline-block; border: 1px solid black";
-        }
-        else if (i < 30) {
-            square.style.cssText = "width: 40px; height: 40px; position: absolute; display: inline-block; border: 1px solid black";
-        }
-        else if (i < 40) {
-            square.style.cssText = "width: 60px; height: 60px; position: absolute; display: inline-block; border: 1px solid black";
-        }
-        else if (i < 50) {
-            square.style.cssText = "width: 80px; height: 80px; position: absolute; display: inline-block; border: 1px solid black";
-        }
-        else if (i < 60) {
-            square.style.cssText = "width: 100px; height: 100px; position: absolute; display: inline-block; border: 1px solid black";
-        }
-        else {
-            square.style.cssText = "width: 80px; height: 80px; position: absolute; display: inline-block; border: 1px solid black";
-        }
-        page.appendChild(square);
-        reset(square, i);
-        arrowBounce();
-    }
+    // for (let i = 0; i < numSquares; i++) {
+    //     let square = document.createElement("div");
+    //     if (i < 10) {
+    //         square.style.cssText = "width: 8px; height: 8px; position: absolute; display: inline-block; border: 1px solid black";
+    //     }
+    //     else if (i < 20) {
+    //         square.style.cssText = "width: 20px; height: 20px; position: absolute; display: inline-block; border: 1px solid black";
+    //     }
+    //     else if (i < 30) {
+    //         square.style.cssText = "width: 40px; height: 40px; position: absolute; display: inline-block; border: 1px solid black";
+    //     }
+    //     else if (i < 40) {
+    //         square.style.cssText = "width: 60px; height: 60px; position: absolute; display: inline-block; border: 1px solid black";
+    //     }
+    //     else if (i < 50) {
+    //         square.style.cssText = "width: 80px; height: 80px; position: absolute; display: inline-block; border: 1px solid black";
+    //     }
+    //     else if (i < 60) {
+    //         square.style.cssText = "width: 100px; height: 100px; position: absolute; display: inline-block; border: 1px solid black";
+    //     }
+    //     else {
+    //         square.style.cssText = "width: 80px; height: 80px; position: absolute; display: inline-block; border: 1px solid black";
+    //     }
+    //     page.appendChild(square);
+    //     reset(square, i);
+    //     arrowBounce();
+    // }
     let alternator = false;
     let projects = JSON.parse(projectsInfo);
     for(let i = 0; i < projects.items.length; i++) {
