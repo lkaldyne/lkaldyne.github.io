@@ -1,8 +1,3 @@
-@font-face{
-	font-family: 'Montserrat';
-	src: url('./fonts/Montserrat-Regular.ttf') format("truetype"), local('MontSerrat');
-}
-
 body {
     background: white;
     margin: 0;
@@ -12,7 +7,7 @@ html {
 }
 
 .intrologocontainer {
-    /* opacity: 0; */
+    z-index: 1;
     position: fixed;
     background: linear-gradient(#000028, #000017);
     display: flex;
@@ -82,17 +77,21 @@ html {
     color: #C3E1E8;
     font-family: 'Montserrat';
     font-size: 20;
+    transition: 0.3s;
 }
 
-/* .navoptiontext:hover {
-    color: black;
-} */
+.navoptiontext:hover {
+    opacity: 0.5;
+}
 
 .landingpage {
-    background: black;
+    background-image: url("./media/landingbckg.jpg");
+    background-size: cover;
+    background-position: center;
     display: flex;
-    align-items: center;
+    align-items: top;
     justify-content: center;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
 }
@@ -100,6 +99,7 @@ html {
 .landingpageIMG {
     width: 100%;
     height: 100%;
+    position: absolute;
     object-fit: cover;
 }
 
@@ -110,4 +110,62 @@ html {
     height: 50vh;
     position: absolute;
     background: rgba(0,0,0,0);
+}
+
+.socials {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 10px 0;
+    height: 10%;
+}
+
+.social {
+    margin: 0 10px 0 10px;
+}
+
+.socialicon {
+    opacity: 0.6;
+    cursor: pointer;
+    color: white;
+    font-size: 24pt;
+    transition: 0.5s;
+}
+
+.socialicon:hover {
+    opacity: 1;
+}
+
+.landingmessagewrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 90%;
+    padding-top: 20vh;
+    padding-bottom: 40vh;
+}
+
+.landingmessagewrappercol {
+    width: 50%;
+    align-items: center;
+    padding: 0 30px 0 30px;
+    justify-content: flex-start;
+}
+
+.landingmessagetext {
+    font-family: 'Montserrat';
+    font-size: 36px;
+    line-height: 60px;
+    letter-spacing: 5px;
+    color: white;
+}
+
+.landingalttext {
+    font-family: 'courier';
+    font-size: 20px;
+    line-height: 60px;
+    letter-spacing: 5px;
+    color: 1A113E;
+    text-align: center;
 }
