@@ -24,21 +24,15 @@ html {
 }
 
 .logo-uline {
+    width: 0;
     margin-top: 15px;
     height: 5px;
     background-color: white;
 }
 
-#logo-firstline {
-    width: 165px;
-}
-
-#logo-secondline {
-    width: 125px;
-}
-
-#logo-thirdline {
-    width: 95px;
+#logosvg {
+    margin-bottom: 100px;
+    opacity: 0;
 }
 
 .nav {
