@@ -9,6 +9,16 @@ gsap.to('#logo-thirdline', { delay: 0.9, width: 95, duration: 0.5, ease: 'Power4
 gsap.to('.intrologocontainer', { delay: 1.5, opacity: 0, zIndex: 0, duration: 1 })
 gsap.to('.nav', { delay: 1.5, zIndex: 1, duration: 1 })
 
+var slideUp = {
+    distance: '30%',
+    origin: 'bottom',
+    opacity: 0.5,
+    delay: 250,
+    easing: 'ease-out'
+};
+
+ScrollReveal().reveal('.aboutpageimg', slideUp);
+ScrollReveal().reveal('.aboutpagetextcol', slideUp);
 
 $(document).ready(function () {
     // Add smooth scrolling to all links
