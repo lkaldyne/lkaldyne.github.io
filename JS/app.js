@@ -35,21 +35,35 @@ $(document).ready(function () {
     });
 });
 
-var topofDiv = $("#about").offset().top; //gets offset of header
-var height = $("#about").outerHeight(); //gets height of header
-
 $(window).scroll(function () {
-    // console.log(topofDiv);
+    var topofAbout = $("#about").offset().top; //gets offset of header
+    var aboutHeight = $("#about").outerHeight(); //gets height of header
+    var topofSkills = $("#skills").offset().top; //gets offset of header
+    var skillsHeight = $("#skills").outerHeight(); //gets height of header
+    var topofProjects = $("#projects").offset().top; //gets offset of header
+    var projectsHeight = $("#projects").outerHeight(); //gets height of header
     if ($(window).scrollTop() >= 50) {
         $(".nav").css("background", "#5b838c");
     }
     else {
         $(".nav").css("background", "rgba(0,0,0,0)");
     }
-    if ($(window).scrollTop() >= (topofDiv) && $(window).scrollTop() <= (topofDiv + height)) {
+    if ($(window).scrollTop() >= (topofAbout) && $(window).scrollTop() < (topofAbout + aboutHeight)) {
         $("#navoptionabout").css("color", "rgba(0,0,0,0.3)");
     }
     else {
         $("#navoptionabout").css("color", "#C3E1E8");
+    }
+    if ($(window).scrollTop() >= (topofSkills) && $(window).scrollTop() < (topofSkills + skillsHeight)) {
+        $("#navoptionskills").css("color", "rgba(0,0,0,0.3)");
+    }
+    else {
+        $("#navoptionskills").css("color", "#C3E1E8");
+    }
+    if ($(window).scrollTop() >= (topofProjects) && $(window).scrollTop() < (topofProjects + projectsHeight)) {
+        $("#navoptionprojects").css("color", "rgba(0,0,0,0.3)");
+    }
+    else {
+        $("#navoptionprojects").css("color", "#C3E1E8");
     }
 });

@@ -84,8 +84,8 @@ html {
     background-size: cover;
     background-position: center;
     display: flex;
-    align-items: top;
-    justify-content: center;
+    /* align-items: top; */
+    /* justify-content: center; */
     flex-direction: column;
     width: 100vw;
     height: 100vh;
@@ -112,8 +112,8 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 0 20px 0;
-    height: 10%;
+    padding: 0 0 2px 0;
+    height: 10vh;
 }
 
 .social {
@@ -136,15 +136,13 @@ html {
     width: 100%;
     display: flex;
     align-items: center;
-    height: 90%;
-    padding-top: 20vh;
-    padding-bottom: 40vh;
+    height: 90vh;
 }
 
 .landingmessagewrappercol {
     width: 50%;
     align-items: center;
-    padding: 0 0 0 30px;
+    padding: 0 0 5% 30px;
     justify-content: flex-start;
 }
 
@@ -167,6 +165,7 @@ html {
 
 .aboutpage {
     background: linear-gradient(#517B84, #89B1B1);
+    /* background: #517B84; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -212,4 +211,50 @@ html {
     line-height: 40px;
     letter-spacing: 2px;
     color: white;
+}
+
+.skillspage {
+    /* background: #517B84; */
+    background: linear-gradient(#89B1B1,#517B84);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.skillspagerow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: blue;
+    border: 1pt solid white;
+}
+
+.skillspagecol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: red;
+}
+
+.skillspagedesc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.projectspage {
+    background: linear-gradient(#517B84, #89B1B1);
+    /* background: #517B84; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
 }
