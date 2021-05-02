@@ -40,7 +40,7 @@
 
     <div class="nav">
         <div class="navlogo">
-            <a href="https://laithkd.com">
+            <a href="#landing">
                 <svg width="62" height="35" viewBox="0 0 150 78" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M7.91501 7.20312H33.1338V70.9062H7.91501V7.20312ZM41.1963 66.4531C41.1963 59.9844 44.9463 55.5938 52.4463 53.2812C55.3213 52.4062 59.0244 51.9688 63.5556 51.9688H67.2588V71H41.1963V66.4531Z"
@@ -60,11 +60,11 @@
             </div>
 
             <div class="navoption">
-                <a class="navoptiontext" href="#">skills</a>
+                <a class="navoptiontext" id="navoptionskills" href="#skills">skills</a>
             </div>
 
             <div class="navoption">
-                <a class="navoptiontext" href="#">projects</a>
+                <a class="navoptiontext" id="navoptionprojects" href="#projects">projects</a>
             </div>
 
             <div class="navoption">
@@ -78,7 +78,7 @@
 
     </div>
 
-    <div class="landingpage">
+    <div class="landingpage" id="landing">
         <div class="landingmessagewrapper">
             <div class="landingmessagewrappercol">
                 <p class="landingmessagetext">Hi, I'm <span
@@ -124,6 +124,91 @@
         </div>
     </div>
 
+    <div class="skillspage" id="skills">
+        <!-- <div class="skillspagetitle">
+            <p class="skilltitletext">Here's What I Know</p>
+        </div> -->
+        <div class="skillspagerow" style="padding-top: 8%">
+            <div class="skillspagecol">
+                <span class="iconify skillicon" data-inline="false" data-icon="bx:bxl-python"></span>
+                <p class="skillheadertext">Python</p>
+                <div class="skillspagedesc">
+                    <p class="skilldesctext">Django, Flask, Pandas, NLTK, SciKit-Learn</p>
+                </div>
+            </div>
+            <div class="skillspagecol">
+                <span class="iconify skillicon" data-inline="false" data-icon="simple-icons:docker"></span>
+                <p class="skillheadertext">Devops</p>
+                <div class="skillspagedesc">
+                    <p class="skilldesctext">Docker, Kubernetes, Bash</p>
+                </div>
+            </div>
+            <div class="skillspagecol">
+                <span class="iconify skillicon" data-inline="false" data-icon="cib:java"></span>
+                <p class="skillheadertext">Java</p>
+                <div class="skillspagedesc">
+                    <p class="skilldesctext">Spring Boot</p>
+                </div>
+            </div>
+            <div class="skillspagecol">
+                <span class="iconify skillicon" data-inline="false" data-icon="teenyicons:ruby-solid"></span>
+                <p class="skillheadertext">Ruby</p>
+                <div class="skillspagedesc">
+                    <p class="skilldesctext">Rails</p>
+                </div>
+            </div>
+            <div class="skillspagecol">
+                <span class="iconify skillicon" data-inline="false" data-icon="bx:bxl-javascript"></span>
+                <p class="skillheadertext">JavaScript</p>
+                <div class="skillspagedesc">
+                    <p class="skilldesctext">React, Vue, Node, Express, GSAP</p>
+                </div>
+            </div>
+        </div>
+        <div class="skillspagerow">
+            <div class="skillspagecol">
+                <span class="iconify skillicon" data-inline="false" data-icon="cib:jenkins"></span>
+                <p class="skillheadertext">CI/CD</p>
+                <div class="skillspagedesc">
+                    <p class="skilldesctext">Jenkins, Travis-CS, Gitlab-CI</p>
+                </div>
+            </div>
+            <div class="skillspagecol">
+                <span class="iconify skillicon" data-inline="false" data-icon="icomoon-free:html-five"></span>
+                <p class="skillheadertext">HTML/CSS</p>
+                <!-- <div class="skillspagedesc">
+                    <p class="skilldesctext">Django, Flask, Pandas, NLTK, SciKit-Learn</p>
+                </div> -->
+            </div>
+            <div class="skillspagecol">
+                <span class="iconify skillicon" data-inline="false" data-icon="bx:bxl-c-plus-plus"></span>
+                <p class="skillheadertext">C/C++</p>
+                <!-- <div class="skillspagedesc">
+                    <p class="skilldesctext">Django, Flask, Pandas, NLTK, SciKit-Learn</p>
+                </div> -->
+            </div>
+            <div class="skillspagecol">
+                <span class="iconify skillicon" data-inline="false" data-icon="icomoon-free:database"></span>
+                <p class="skillheadertext">Databases</p>
+                <div class="skillspagedesc">
+                    <p class="skilldesctext">MySQL, MongoDB</p>
+                </div>
+            </div>
+            <div class="skillspagecol">
+                <span class="iconify skillicon" data-inline="false" data-icon="ion:hardware-chip"></span>
+                <p class="skillheadertext">Hardware</p>
+                <div class="skillspagedesc">
+                    <p class="skilldesctext">RISC-V Assembly, ARM Cortex, VHDL, Verilog, Arduino</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="projectspage" id="projects">
+
+    </div>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
