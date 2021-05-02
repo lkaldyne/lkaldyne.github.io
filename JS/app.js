@@ -19,6 +19,7 @@ var slideUp = {
 
 ScrollReveal().reveal('.aboutpageimg', slideUp);
 ScrollReveal().reveal('.aboutpagetextcol', slideUp);
+ScrollReveal().reveal('.skillspagecol', slideUp);
 
 $(document).ready(function () {
     // Add smooth scrolling to all links
@@ -52,6 +53,8 @@ $(window).scroll(function () {
     var skillsHeight = $("#skills").outerHeight(); //gets height of header
     var topofProjects = $("#projects").offset().top; //gets offset of header
     var projectsHeight = $("#projects").outerHeight(); //gets height of header
+    console.log(topofProjects);
+    console.log($(window).scrollTop());
     if ($(window).scrollTop() >= 50) {
         $(".nav").css("background", "#5b838c");
     }
