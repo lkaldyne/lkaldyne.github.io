@@ -56,7 +56,7 @@ $(window).scroll(function () {
     console.log(topofProjects);
     console.log($(window).scrollTop());
     if ($(window).scrollTop() >= 50) {
-        $(".nav").css("background", "#5b838c");
+        $(".nav").css("background", "#517B84");
     }
     else {
         $(".nav").css("background", "rgba(0,0,0,0)");
