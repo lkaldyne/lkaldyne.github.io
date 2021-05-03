@@ -8,6 +8,7 @@ gsap.to('#logo-thirdline', { delay: 0.9, width: 95, duration: 0.5, ease: 'Power4
 // gsap.from('#particles-div', { delay: 1.5, opacity: 0, duration: 1 })
 gsap.to('.intrologocontainer', { delay: 1.5, opacity: 0, zIndex: 0, duration: 1 })
 gsap.to('.nav', { delay: 1.5, zIndex: 1, duration: 1 })
+gsap.to('.intrologocontainer', { delay: 2.5, height: 0, duration: 0.1 })
 
 var slideUp = {
     distance: '30%',
@@ -44,39 +45,55 @@ $(document).ready(function () {
             });
         } // End if
     });
+
+    $(window).scroll(function () {
+        var topofAbout = $("#about").offset().top; //gets offset of header
+        var aboutHeight = $("#about").outerHeight(); //gets height of header
+        var topofSkills = $("#skills").offset().top; //gets offset of header
+        var skillsHeight = $("#skills").outerHeight(); //gets height of header
+        var topofProjects = $("#projects").offset().top; //gets offset of header
+        var projectsHeight = $("#projects").outerHeight(); //gets height of header
+
+        if ($(window).scrollTop() >= 50) {
+            $(".nav").css("background", "#517B84");
+        }
+        else {
+            $(".nav").css("background", "rgba(0,0,0,0)");
+        }
+        if ($(window).scrollTop() >= (topofAbout) && $(window).scrollTop() < (topofAbout + aboutHeight)) {
+            $("#navoptionabout").css("color", "rgba(0,0,0,0.3)");
+        }
+        else {
+            $("#navoptionabout").css("color", "#C3E1E8");
+        }
+        if ($(window).scrollTop() >= (topofSkills) && $(window).scrollTop() < (topofSkills + skillsHeight)) {
+            $("#navoptionskills").css("color", "rgba(0,0,0,0.3)");
+        }
+        else {
+            $("#navoptionskills").css("color", "#C3E1E8");
+        }
+        if ($(window).scrollTop() >= (topofProjects) && $(window).scrollTop() < (topofProjects + projectsHeight)) {
+            $("#navoptionprojects").css("color", "rgba(0,0,0,0.3)");
+        }
+        else {
+            $("#navoptionprojects").css("color", "#C3E1E8");
+        }
+    });
+
+    $(".projectrow").hover(function () {
+        $(this).css("background", "#20202B");
+        $(this).find(".projectinfohidden").css("opacity", "1");
+        $(this).find(".projectheadertext").css("color", "white");
+        $(this).find(".projectheaderline").css("background", "white");
+        $(this).find(".projectinfobckg").css("opacity", "0");
+
+    }, function () {
+        $(this).css("background", "#EEEEEE");
+        $(this).find(".projectinfohidden").css("opacity", "0");
+        $(this).find(".projectheadertext").css("color", "black");
+        $(this).find(".projectheaderline").css("background", "black");
+        $(this).find(".projectinfobckg").css("opacity", "1");
+    });
+
 });
 
-$(window).scroll(function () {
-    var topofAbout = $("#about").offset().top; //gets offset of header
-    var aboutHeight = $("#about").outerHeight(); //gets height of header
-    var topofSkills = $("#skills").offset().top; //gets offset of header
-    var skillsHeight = $("#skills").outerHeight(); //gets height of header
-    var topofProjects = $("#projects").offset().top; //gets offset of header
-    var projectsHeight = $("#projects").outerHeight(); //gets height of header
-    console.log(topofProjects);
-    console.log($(window).scrollTop());
-    if ($(window).scrollTop() >= 50) {
-        $(".nav").css("background", "#517B84");
-    }
-    else {
-        $(".nav").css("background", "rgba(0,0,0,0)");
-    }
-    if ($(window).scrollTop() >= (topofAbout) && $(window).scrollTop() < (topofAbout + aboutHeight)) {
-        $("#navoptionabout").css("color", "rgba(0,0,0,0.3)");
-    }
-    else {
-        $("#navoptionabout").css("color", "#C3E1E8");
-    }
-    if ($(window).scrollTop() >= (topofSkills) && $(window).scrollTop() < (topofSkills + skillsHeight)) {
-        $("#navoptionskills").css("color", "rgba(0,0,0,0.3)");
-    }
-    else {
-        $("#navoptionskills").css("color", "#C3E1E8");
-    }
-    if ($(window).scrollTop() >= (topofProjects) && $(window).scrollTop() < (topofProjects + projectsHeight)) {
-        $("#navoptionprojects").css("color", "rgba(0,0,0,0.3)");
-    }
-    else {
-        $("#navoptionprojects").css("color", "#C3E1E8");
-    }
-});
