@@ -21,6 +21,7 @@ var slideUp = {
 ScrollReveal().reveal('.aboutpageimg', slideUp);
 ScrollReveal().reveal('.aboutpagetextcol', slideUp);
 ScrollReveal().reveal('.skillspagecol', slideUp);
+ScrollReveal().reveal('.projectrow', slideUp);
 
 $(document).ready(function () {
     // Add smooth scrolling to all links
@@ -86,6 +87,8 @@ $(document).ready(function () {
         $(this).find(".projectheadertext").css("color", "white");
         $(this).find(".projectheaderline").css("background", "white");
         $(this).find(".projectinfobckg").css("opacity", "0");
+        $(this).find(".projectinfohidden").css("z-index", "0");
+
 
     }, function () {
         $(this).css("background", "#EEEEEE");

@@ -7,7 +7,7 @@ html {
 }
 
 .intrologocontainer {
-    z-index: 1;
+    z-index: 3;
     position: fixed;
     background: linear-gradient(#000028, #000017);
     display: flex;
@@ -46,6 +46,7 @@ html {
     height: 15vh;
     transition: 0.2s;
     min-height: 60px;
+    z-index: 2;
 }
 
 .navlogo {
@@ -279,7 +280,7 @@ html {
 .projectswrapper {
     background: #105463;
     width: 100%;
-    height: 200vh;
+    height: auto;
 }
 
 .projectspage {
@@ -354,7 +355,7 @@ html {
     text-align: center;
     font-family: 'Montserrat';
     font-size: 25px;
-    line-height: 60px;
+    line-height: 40px;
     color: black;
     margin: 15px 0 0 0;
     transition: 0.5s;
@@ -365,14 +366,6 @@ html {
     background: black;
     height: 2px;
     transition: 0.5s;
-}
-
-.projectimg {
-    margin: 30px 0 0 0;
-    width: 90%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 5px;
 }
 
 .projectinfo {
@@ -394,18 +387,26 @@ html {
     align-items: center;
     opacity: 0;
     transition: 0.5s;
+    z-index: 1;
 
 }
 
 .projectinfobckg {
     position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     width: 100%;
     height: 100%;
     transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 0;
+}
+
+.projectimg {
+    object-fit: cover;
+    border-radius: 10px;
+    width: 90%;
+    transition: 0.5s;
 }
 
 .projectdesctext {
@@ -415,7 +416,6 @@ html {
     line-height: 25px;
     color: #C9C9C9;
     margin: 20px 0 20px 0;
-    z-index: 1;
 }
 
 .projecticon {
@@ -424,7 +424,7 @@ html {
     color: white;
     font-size: 25pt;
     z-index: 1;
-    margin: 10px 0 20px 0;
+    margin: 0 0 20px 0;
     transition: 0.5s;
 }
 
