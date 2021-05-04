@@ -168,13 +168,21 @@ var beResponsive = function () {
     if (w < 800) {
         $(".nav").hide();
         $("#skills").hide();
-        $("#about").hide();
-        $(".landingalttext").hide();
+        $("#skills-m").show();
+        $("#landingaltcol").hide();
     } else {
         $(".nav").show();
         $("#skills").show();
+        $("#skills-m").hide();
+        $("#landingaltcol").show();
+    }
+
+    if (w < 1000) {
+        $("#about").hide();
+        $("#about-m").show();
+    } else {
         $("#about").show();
-        $(".landingalttext").show();
+        $("#about-m").hide();
     }
 
     initProjects(w);
