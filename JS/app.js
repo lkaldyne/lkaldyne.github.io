@@ -24,6 +24,9 @@ ScrollReveal().reveal('.aboutpagetextcol', slideUp);
 ScrollReveal().reveal('.projectrow', slideUp);
 
 $(document).ready(function () {
+    if ($(window).scrollTop() >= 50) {
+        $(".nav").css("background", "#517B84");
+    }
     // Add smooth scrolling to all links
     $("a").on('click', function (event) {
 
