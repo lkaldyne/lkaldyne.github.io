@@ -81,6 +81,14 @@ var projects = JSON.parse('{\
     ]\
 }');
 
+var slideUp = {
+    distance: '30%',
+    origin: 'bottom',
+    opacity: 0.5,
+    delay: 250,
+    easing: 'ease-out'
+};
+
 var loadProjects = function (numcols) {
     // create column divs
     let projectsContainer = document.getElementById('projectscontainer');
@@ -134,16 +142,15 @@ var loadProjects = function (numcols) {
     }
 };
 
-var initProjects = function () {
+var initProjects = function (w) {
     document.getElementById('projectscontainer').innerHTML = "";
-
-    if ($(window).width() > 1500) {
+    if (w > 1500) {
         loadProjects(4);
     }
-    else if ($(window).width() > 1100) {
+    else if (w > 1100) {
         loadProjects(3);
     }
-    else if ($(window).width() > 800) {
+    else if (w > 800) {
         loadProjects(2);
     }
     else {
@@ -151,8 +158,23 @@ var initProjects = function () {
     }
 };
 
+var beResponsive = function () {
+    let w = $(window).width();
+
+    if ($(window).scrollTop() >= 50) {
+        $(".nav").css("background", "#517B84");
+    }
+
+    if (w < 800) {
+        $(".nav").hide();
+    } else {
+        $(".nav").show();
+    }
+
+    initProjects(w);
+}
+
 var projRowHoverIn = function () {
-    console.log("IN");
     $(this).css("background", "#20202B");
     $(this).find(".projectinfohidden").css("opacity", "1");
     $(this).find(".projectheadertext").css("color", "white");
@@ -162,7 +184,6 @@ var projRowHoverIn = function () {
 };
 
 var projRowHoverOut = function () {
-    console.log("OUT");
     $(this).css("background", "#EEEEEE");
     $(this).find(".projectinfohidden").css("opacity", "0");
     $(this).find(".projectheadertext").css("color", "black");
@@ -184,23 +205,9 @@ $(document).ready(function () {
     gsap.to('.nav', { delay: 1.5, zIndex: 1, duration: 1 })
     gsap.to('.intrologocontainer', { delay: 2.5, height: 0, duration: 0.1 })
 
-    var slideUp = {
-        distance: '30%',
-        origin: 'bottom',
-        opacity: 0.5,
-        delay: 250,
-        easing: 'ease-out'
-    };
-    ScrollReveal().reveal('.aboutpageimg', slideUp);
-    ScrollReveal().reveal('.aboutpagetextcol', slideUp);
-    // ScrollReveal().reveal('.skillspagecol', slideUp);
+    beResponsive();
     ScrollReveal().reveal('.projectrow', slideUp);
 
-    initProjects();
-
-    if ($(window).scrollTop() >= 50) {
-        $(".nav").css("background", "#517B84");
-    }
     // Add smooth scrolling to all links
     $("a").on('click', function (event) {
 
@@ -229,8 +236,7 @@ $(document).ready(function () {
     //     initProjects();
     // });
     $(window).on('resize', function () {
-        console.log("AYO");
-        initProjects();
+        beResponsive();
     });
 
     $(window).scroll(function () {
