@@ -169,10 +169,12 @@ var beResponsive = function () {
         $(".nav").hide();
         $("#skills").hide();
         $("#about").hide();
+        $(".landingalttext").hide();
     } else {
         $(".nav").show();
         $("#skills").show();
         $("#about").show();
+        $(".landingalttext").show();
     }
 
     initProjects(w);
