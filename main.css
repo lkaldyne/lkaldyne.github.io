@@ -371,6 +371,7 @@ html {
 
 .projectinfo {
     width: 90%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -406,7 +407,8 @@ html {
 .projectimg {
     object-fit: cover;
     border-radius: 10px;
-    width: 90%;
+    max-width: 90%;
+    max-height: 90%;
     transition: 0.5s;
 }
 
