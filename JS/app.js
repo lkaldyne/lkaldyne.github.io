@@ -167,8 +167,10 @@ var beResponsive = function () {
 
     if (w < 800) {
         $(".nav").hide();
+        $("#skills").hide();
     } else {
         $(".nav").show();
+        $("#skills").show();
     }
 
     initProjects(w);
