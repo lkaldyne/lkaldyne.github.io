@@ -20,7 +20,7 @@ var slideUp = {
 
 ScrollReveal().reveal('.aboutpageimg', slideUp);
 ScrollReveal().reveal('.aboutpagetextcol', slideUp);
-ScrollReveal().reveal('.skillspagecol', slideUp);
+// ScrollReveal().reveal('.skillspagecol', slideUp);
 ScrollReveal().reveal('.projectrow', slideUp);
 
 $(document).ready(function () {
