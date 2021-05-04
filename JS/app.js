@@ -137,7 +137,7 @@ var loadProjects = function (numcols) {
 var initProjects = function () {
     document.getElementById('projectscontainer').innerHTML = "";
 
-    if ($(window).width() > 1400) {
+    if ($(window).width() > 1500) {
         loadProjects(4);
     }
     else if ($(window).width() > 1100) {
