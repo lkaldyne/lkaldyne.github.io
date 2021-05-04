@@ -168,9 +168,11 @@ var beResponsive = function () {
     if (w < 800) {
         $(".nav").hide();
         $("#skills").hide();
+        $("#about").hide();
     } else {
         $(".nav").show();
         $("#skills").show();
+        $("#about").show();
     }
 
     initProjects(w);
