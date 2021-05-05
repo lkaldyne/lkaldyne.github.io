@@ -5,6 +5,9 @@ body {
 html {
   scroll-behavior: smooth;
 }
+body, html {
+    height: 100%;
+}
 
 .intrologocontainer {
     z-index: 3;
@@ -342,9 +345,11 @@ html {
 .projectscontainer {
     display: flex;
     justify-content: center;
-    align-items: top;
+    align-items: flex-start;
     width: 100%;
+    height: auto;
     margin-top: -200px;
+    padding-bottom: 40px;
 }
 
 .projectcol {
