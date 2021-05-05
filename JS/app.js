@@ -241,13 +241,12 @@ $(document).ready(function () {
         } // End if
     });
 
-    // $(window).resize(function () {
-    //     console.log("AYO");
-    //     initProjects();
-    // });
-    $(window).on('resize', function () {
+    $(window).resize(function () {
         beResponsive();
     });
+    // $(window).on('resize', function () {
+    //     beResponsive();
+    // });
 
     $(".globalwrapper").scroll(function () {
 
@@ -285,9 +284,9 @@ $(document).ready(function () {
         }
     });
 
-    $(".projectrow").hover(projRowHoverIn, projRowHoverOut);
-    // $(".projectrow").on('mouseenter', projRowHoverIn);
-    // $(".projectrow").on('mouseleave', projRowHoverOut);
+    // $(".projectrow").hover(projRowHoverIn, projRowHoverOut);
+    $(".projectscontainer").on('mouseenter', '.projectrow', projRowHoverIn);
+    $(".projectscontainer").on('mouseleave', '.projectrow', projRowHoverOut);
 });
 
 
