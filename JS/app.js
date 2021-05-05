@@ -81,7 +81,7 @@ var projects = JSON.parse('{\
     ]\
 }');
 
-var scrollOvershoot = 40;
+var scrollOvershoot = 30;
 
 var slideUp = {
     distance: '30%',
@@ -172,14 +172,14 @@ var beResponsive = function () {
     }
 
     if (w < 1000) {
-        $("#about").hide();
+        $("#about-d").hide();
         $("#about-m").show();
-        $("#skills").hide();
+        $("#skills-d").hide();
         $("#skills-m").show();
     } else {
-        $("#about").show();
+        $("#about-d").show();
         $("#about-m").hide();
-        $("#skills").show();
+        $("#skills-d").show();
         $("#skills-m").hide();
     }
 
@@ -234,7 +234,7 @@ $(document).ready(function () {
             // Using jQuery's animate() method to add smooth page scroll
             // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
             $('.globalwrapper').animate({
-                scrollTop: $(hash).offset().top + $(".globalwrapper").scrollTop() - scrollOvershoot
+                scrollTop: $(hash).offset().top + $(".globalwrapper").scrollTop()
             }, 500, function () {
 
                 // Add hash (#) to URL when done scrolling (default click behavior)

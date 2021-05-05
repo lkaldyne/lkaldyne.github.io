@@ -16,6 +16,13 @@ body, html {
     overflow-y: scroll;
 }
 
+
+.pagewrapper {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
 .intrologocontainer {
     z-index: 3;
     position: fixed;
@@ -219,7 +226,7 @@ body, html {
 
 .aboutpageimg {
     width: 80%;
-    height: 55%;
+    height: 70%;
     object-fit: cover;
     border-radius: 22px;
     border: 3pt solid white;
