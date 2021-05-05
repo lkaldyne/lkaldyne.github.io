@@ -161,28 +161,24 @@ var initProjects = function (w) {
 var beResponsive = function () {
     let w = $(window).width();
 
-    if ($(window).scrollTop() >= 50) {
-        $(".nav").css("background", "#517B84");
-    }
-
     if (w < 800) {
         $(".nav").hide();
-        $("#skills").hide();
-        $("#skills-m").show();
         $("#landingaltcol").hide();
     } else {
         $(".nav").show();
-        $("#skills").show();
-        $("#skills-m").hide();
         $("#landingaltcol").show();
     }
 
     if (w < 1000) {
         $("#about").hide();
         $("#about-m").show();
+        $("#skills").hide();
+        $("#skills-m").show();
     } else {
         $("#about").show();
         $("#about-m").hide();
+        $("#skills").show();
+        $("#skills-m").hide();
     }
 
     initProjects(w);
@@ -220,7 +216,7 @@ $(document).ready(function () {
     gsap.to('.intrologocontainer', { delay: 2.5, height: 0, duration: 0.1 })
 
     beResponsive();
-    ScrollReveal().reveal('.projectrow', slideUp);
+    // ScrollReveal().reveal('.projectrow', slideUp);
 
     // Add smooth scrolling to all links
     $("a").on('click', function (event) {
@@ -235,9 +231,9 @@ $(document).ready(function () {
 
             // Using jQuery's animate() method to add smooth page scroll
             // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 50, function () {
+            $('.globalwrapper').animate({
+                scrollTop: $(hash).offset().top + $(".globalwrapper").scrollTop() - 20
+            }, 500, function () {
 
                 // Add hash (#) to URL when done scrolling (default click behavior)
                 // window.location.hash = hash;
@@ -253,33 +249,35 @@ $(document).ready(function () {
         beResponsive();
     });
 
-    $(window).scroll(function () {
-        var topofAbout = $("#about").offset().top; //gets offset of header
+    $(".globalwrapper").scroll(function () {
+
+        var st = $(".globalwrapper").scrollTop();
+        var topofAbout = $("#about").offset().top + st - 30; //gets offset of header
         var aboutHeight = $("#about").outerHeight(); //gets height of header
-        var topofSkills = $("#skills").offset().top; //gets offset of header
+        var topofSkills = $("#skills").position().top + st - 30; //gets offset of header
         var skillsHeight = $("#skills").outerHeight(); //gets height of header
-        var topofProjects = $("#projects").offset().top; //gets offset of header
+        var topofProjects = $("#projects").position().top + st - 30; //gets offset of header
         var projectsHeight = $("#projects").outerHeight(); //gets height of header
 
-        if ($(window).scrollTop() >= 50) {
+        if (st >= 50) {
             $(".nav").css("background", "#517B84");
         }
         else {
             $(".nav").css("background", "rgba(0,0,0,0)");
         }
-        if ($(window).scrollTop() >= (topofAbout) && $(window).scrollTop() < (topofAbout + aboutHeight)) {
+        if (st >= (topofAbout) && st < (topofAbout + aboutHeight)) {
             $("#navoptionabout").css("color", "rgba(0,0,0,0.3)");
         }
         else {
             $("#navoptionabout").css("color", "#C3E1E8");
         }
-        if ($(window).scrollTop() >= (topofSkills) && $(window).scrollTop() < (topofSkills + skillsHeight)) {
+        if (st >= (topofSkills) && st < (topofSkills + skillsHeight)) {
             $("#navoptionskills").css("color", "rgba(0,0,0,0.3)");
         }
         else {
             $("#navoptionskills").css("color", "#C3E1E8");
         }
-        if ($(window).scrollTop() >= (topofProjects) && $(window).scrollTop() < (topofProjects + projectsHeight)) {
+        if (st >= (topofProjects) && st < (topofProjects + projectsHeight)) {
             $("#navoptionprojects").css("color", "rgba(0,0,0,0.3)");
         }
         else {

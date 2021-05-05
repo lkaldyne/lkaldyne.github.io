@@ -9,6 +9,13 @@ body, html {
     height: 100%;
 }
 
+.globalwrapper {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    overflow-y: scroll;
+}
+
 .intrologocontainer {
     z-index: 3;
     position: fixed;
