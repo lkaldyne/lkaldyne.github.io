@@ -264,7 +264,6 @@ body, html {
 }
 
 .skillspage {
-    /* background: linear-gradient(#89B1B1,#517B84); */
     background-image: url("./media/skillsBckg.jpeg");
     background-size: cover;
     background-position: center;
@@ -275,6 +274,10 @@ body, html {
     width: 100%;
     height: auto;
     min-height: 600px;
+}
+
+#skills-m {
+    background-attachment: scroll;
 }
 
 .skillspagerow {
