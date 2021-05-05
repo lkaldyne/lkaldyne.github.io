@@ -472,3 +472,19 @@ body, html {
 .projecticon:hover {
     opacity: 1;
 }
+
+.backtotop {
+    width: 100%;
+    background: #105463;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backtotoptext {
+    text-decoration: none;
+    color: white;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 100px;
+}

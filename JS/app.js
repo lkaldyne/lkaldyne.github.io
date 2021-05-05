@@ -81,6 +81,8 @@ var projects = JSON.parse('{\
     ]\
 }');
 
+var scrollOvershoot = 40;
+
 var slideUp = {
     distance: '30%',
     origin: 'bottom',
@@ -232,7 +234,7 @@ $(document).ready(function () {
             // Using jQuery's animate() method to add smooth page scroll
             // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
             $('.globalwrapper').animate({
-                scrollTop: $(hash).offset().top + $(".globalwrapper").scrollTop() - 20
+                scrollTop: $(hash).offset().top + $(".globalwrapper").scrollTop() - scrollOvershoot
             }, 500, function () {
 
                 // Add hash (#) to URL when done scrolling (default click behavior)
@@ -251,11 +253,11 @@ $(document).ready(function () {
     $(".globalwrapper").scroll(function () {
 
         var st = $(".globalwrapper").scrollTop();
-        var topofAbout = $("#about").offset().top + st - 30; //gets offset of header
+        var topofAbout = $("#about").offset().top + st - scrollOvershoot; //gets offset of header
         var aboutHeight = $("#about").outerHeight(); //gets height of header
-        var topofSkills = $("#skills").position().top + st - 30; //gets offset of header
+        var topofSkills = $("#skills").position().top + st - scrollOvershoot; //gets offset of header
         var skillsHeight = $("#skills").outerHeight(); //gets height of header
-        var topofProjects = $("#projects").position().top + st - 30; //gets offset of header
+        var topofProjects = $("#projects").position().top + st - scrollOvershoot; //gets offset of header
         var projectsHeight = $("#projects").outerHeight(); //gets height of header
 
         if (st >= 50) {
