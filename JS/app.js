@@ -24,6 +24,12 @@ var projects = JSON.parse('{\
             "link"    : "",\
             "imgLink" : "media/projectMedia/PNGTool.png"\
         },\
+        {\
+            "title"   : "Meza",\
+            "desc"   : "Created a mobile app that scores a food product’s healthiness based on a photo of its ingredients.<br><br>Leveraged technologies such as Tesseract.js, Google API, and Watson API for OCR, automated ingredient research, and sentiment analysis respectively.",\
+            "link"    : "",\
+            "imgLink" : "media/projectMedia/meza.png"\
+        },\
 		{\
             "title"   : "Titanic ML",\
             "desc"   : "Built a K-Means Clustering algorithm to predict the likelihood of survival on the Titanic ship based on various factors (age, gender, class, etc.)",\
