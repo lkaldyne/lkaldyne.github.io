@@ -54,6 +54,10 @@ body, html {
     opacity: 0;
 }
 
+#nav-m a {
+    font-size: 16px;
+}
+
 .nav {
     position: fixed;
     background: rgba(0,0,0,0);
@@ -324,6 +328,10 @@ body, html {
     font-family: 'Montserrat';
     color: rgb(189, 186, 186);
     font-size: 14px;
+}
+
+#skills-m .skillheadertext {
+    font-size: 25px;
 }
 
 .projectswrapper {

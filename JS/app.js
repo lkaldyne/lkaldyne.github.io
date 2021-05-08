@@ -170,10 +170,12 @@ var beResponsive = function () {
     let w = $(window).width();
 
     if (w < 800) {
-        $(".nav").hide();
+        $("#nav-d").hide();
+        $("#nav-m").show();
         $("#landingaltcol").hide();
     } else {
-        $(".nav").show();
+        $("#nav-d").show();
+        $("#nav-m").hide();
         $("#landingaltcol").show();
     }
 
