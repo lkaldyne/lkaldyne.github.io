@@ -448,6 +448,7 @@ body, html {
     opacity: 0;
     transition: 0.5s;
     z-index: 1;
+    padding-bottom: 10px;
 
 }
 
@@ -470,6 +471,21 @@ body, html {
     transition: 0.5s;
 }
 
+.projectInProg {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 10px 0 20px 0; */
+}
+
+.projectInProgText {
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    color: rgb(151, 151, 151);
+}
+
 .projectdesctext {
     text-align: center;
     font-family: 'Montserrat';
@@ -485,7 +501,7 @@ body, html {
     color: white;
     font-size: 25pt;
     z-index: 1;
-    margin: 0 0 20px 0;
+    /* margin: 0 0 20px 0; */
     transition: 0.5s;
 }
 

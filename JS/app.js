@@ -4,6 +4,7 @@ var projects = JSON.parse('{\
             "title"   : "Audio Editing Webapp",\
             "desc"   : "Built a webapp in Flask, Librosa, and React to modify audio files.<br><br>App was architected as a set of microservices with an orchestrator (kubernetes) and deployed to AWS EKS.<br><br>User audio files are temporarily stored in s3, modified, and re-downloaded.",\
             "link"    : "https://github.com/lkaldyne/altered-sound-tool",\
+            "inProgress"    : true,\
             "imgLink" : "media/projectMedia/alteredsound.png"\
         },\
         {\
@@ -28,6 +29,7 @@ var projects = JSON.parse('{\
             "title"   : "Meza",\
             "desc"   : "Created a mobile app that scores a food product’s healthiness based on a photo of its ingredients.<br><br>Leveraged technologies such as Tesseract.js, Google API, and Watson API for OCR, automated ingredient research, and sentiment analysis respectively.",\
             "link"    : "",\
+            "inProgress"    : true,\
             "imgLink" : "media/projectMedia/meza.png"\
         },\
 		{\
@@ -46,6 +48,7 @@ var projects = JSON.parse('{\
             "title"   : "The AutoCommitter",\
             "desc"   : "Built a web app to make any developer look like a dedicated code guru. Auto-Committer performs customizable, routinely commits to GitHub daily or weekly on behalf of its users, giving them a pleasing and colorful commit history.",\
             "link"    : "https://github.com/lkaldyne/autoCommitter",\
+            "inProgress"    : true,\
             "imgLink" : "media/projectMedia/autoCommitter.JPG"\
         },\
         {\
@@ -135,10 +138,12 @@ var loadProjects = function (numcols) {
 
         let projHidden = document.createElement("div");
         projHidden.className = "projectinfohidden";
+        projHidden.innerHTML = `<p class="projectdesctext">${projects.items[i].desc}</p>`;
         if (projects.items[i].link.length) {
-            projHidden.innerHTML = `<p class="projectdesctext">${projects.items[i].desc}</p><a href="${projects.items[i].link}" target="_blank"><span class="iconify projecticon" data-inline="false" data-icon="ant-design:github-filled"></span></a>`;
-        } else {
-            projHidden.innerHTML = `<p class="projectdesctext">${projects.items[i].desc}</p>`;
+            projHidden.innerHTML += `<a href="${projects.items[i].link}" target="_blank"><span class="iconify projecticon" data-inline="false" data-icon="ant-design:github-filled"></span></a>`;
+        }
+        if (projects.items[i].inProgress) {
+            projHidden.innerHTML += `<div class="projectInProg"><span class="iconify projectInProgText" data-inline="false" data-icon="bi:tools" style="margin-right: 10px;"></span><p class="projectInProgText">In Progress</p></div>`
         }
 
         projInfo.appendChild(projInfoBckg);
