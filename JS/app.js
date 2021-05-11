@@ -26,6 +26,12 @@ var projects = JSON.parse('{\
             "imgLink" : "media/projectMedia/PNGTool.png"\
         },\
         {\
+            "title"   : "NCR Hackathon 2019",\
+            "desc"   : "Revamped and modernized NCR\'s Passport application (check scanning for bank tellers) using react and react native, as well as websockets for live page updates.<br><br>Also added a feature for check scanning via mobile phone rather than only via enterprise check scanners.",\
+            "link"    : "https://github.com/GV79/Passport-4.0",\
+            "imgLink" : "media/projectMedia/ncr.png"\
+        },\
+        {\
             "title"   : "Meza",\
             "desc"   : "Created a mobile app that scores a food product’s healthiness based on a photo of its ingredients.<br><br>Leveraged technologies such as Tesseract.js, Google API, and Watson API for OCR, automated ingredient research, and sentiment analysis respectively.",\
             "link"    : "",\
@@ -50,6 +56,12 @@ var projects = JSON.parse('{\
             "link"    : "https://github.com/lkaldyne/autoCommitter",\
             "inProgress"    : true,\
             "imgLink" : "media/projectMedia/autoCommitter.JPG"\
+        },\
+        {\
+            "title"   : "Genesys Hackathon 2018",\
+            "desc"   : "Built an enhanced call center agent prioritization tool using a Keras deeplearning model for GenesysHacks Purecloud 2018.<br><br>The idea was that calls are to be routed to agents based on their skills, solved tickets, and previous call experience rather than at random.",\
+            "link"    : "",\
+            "imgLink" : "media/projectMedia/genesyshackathon.png"\
         },\
         {\
             "title"   : "Blogging Webapp",\
@@ -86,6 +98,12 @@ var projects = JSON.parse('{\
             "desc"   : "Programmed a pseudo-3d crazy-taxi game replica using PyProcessing and custom 3d/depth logic.",\
             "link"    : "https://github.com/lkaldyne/Crazy-Car-Jump",\
             "imgLink" : "media/projectMedia/crazy_car_jump.jpg"\
+        },\
+        {\
+            "title"   : "ECOO Contest 2017",\
+            "desc"   : "Ontario Semi-finalists – ECOO programming contest (team of four).",\
+            "link"    : "",\
+            "imgLink" : "media/projectMedia/ecoo.png"\
         }\
     ]\
 }');
