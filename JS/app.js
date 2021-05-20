@@ -249,7 +249,6 @@ $(document).ready(function () {
     gsap.to('.intrologocontainer', { delay: 2.5, height: 0, duration: 0.1 })
 
     beResponsive();
-    // ScrollReveal().reveal('.projectrow', slideUp);
 
     // Add smooth scrolling to all links
     $("a").on('click', function (event) {
