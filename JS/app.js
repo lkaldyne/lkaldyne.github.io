@@ -1,8 +1,15 @@
 var projects = JSON.parse('{\
     "items" : [\
         {\
+            "title"   : "WealthStacks - Personal Budgetting App",\
+            "desc"   : "Currently building a personal finance/budgetting app, allowing users to track their income against their expenses, spending, and saving habits.<br><br>Features such as \'Wealth Stacking\' allow users to be rewarded for staying under budget by stacking unspent funds into any category of choice (e.g. extra spending money next month).",\
+            "link"    : "",\
+            "inProgress"    : true,\
+            "imgLink" : "media/projectMedia/wealthstacks.png"\
+        },\
+        {\
             "title"   : "Audio Editing Webapp",\
-            "desc"   : "Built a webapp in Flask, Librosa, and React to modify audio files.<br><br>App was architected as a set of microservices with an orchestrator (kubernetes) and deployed to AWS EKS.<br><br>User audio files are temporarily stored in s3, modified, and re-downloaded.",\
+            "desc"   : "Built a webapp in Flask, Librosa, and React to modify audio files.<br><br>App was architected in both monolithic and microservice strategies. Migration to/deployment of microservices is currently WIP.<br><br>User audio files are temporarily stored in s3, modified, and re-downloaded.",\
             "link"    : "https://github.com/lkaldyne/altered-sound-tool",\
             "inProgress"    : true,\
             "imgLink" : "media/projectMedia/alteredsound.png"\
