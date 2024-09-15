@@ -91,7 +91,7 @@ var projects = JSON.parse('{\
         {\
             "title"   : "Embedded MP3 Player",\
             "desc"   : "Developed an ASCII music reader/player on the Onion Omega 2 embedded linux chip. Current features include reading and playing notes, switching octaves, and toggling between piano and drum modes.<br><br>This project acts as a \'phase 1\' to the overall goal of having a fully-functional audio soundboard for mixing and DJing!",\
-            "link"    : "https://github.com/lkaldyne/ascii_music_player",\
+            "link"    : "https://github.com/lkaldyne/ascii_music_play©er",\
             "imgLink" : "media/projectMedia/onionOmega2.jpg"\
         },\
         {\
