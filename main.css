@@ -283,6 +283,15 @@ html {
     color: white;
 }
 
+.aboutpagetext-m {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    line-height: 40px;
+    letter-spacing: 2px;
+    color: white;
+    text-align: justify;
+}
+
 .skillspage {
     background-image: url("./media/skillsBckg.jpeg");
     background-size: cover;
