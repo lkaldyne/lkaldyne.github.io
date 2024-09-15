@@ -286,10 +286,9 @@ html {
 .aboutpagetext-m {
     font-family: 'Montserrat';
     font-size: 18px;
-    line-height: 40px;
-    letter-spacing: 2px;
+    line-height: 50px;
+    letter-spacing: 1px;
     color: white;
-    text-align: justify;
 }
 
 .skillspage {
